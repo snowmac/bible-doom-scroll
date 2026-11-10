@@ -1,0 +1,11 @@
+name = "scrollword-tts"
+main = "index.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+# Lock this to your deployed app origin before sharing the URL with anyone.
+ALLOWED_ORIGIN = "*"
+ELEVENLABS_VOICE_ID = ""
+
+# Secret (never commit):  npx wrangler secret put ELEVENLABS_API_KEY
+# Local dev: put ELEVENLABS_API_KEY=... in worker/.dev.vars, then  npx wrangler dev

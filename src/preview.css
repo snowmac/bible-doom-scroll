@@ -1,0 +1,10 @@
+/* Artifact frame: 16px side gutters that also clear a phone's side system bar, plus bottom inset for the controls panel. */
+.top, .f-controls {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.f-controls { padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)); }
+.f-context { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.top .tag { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.sheet-body { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+.flash.hc { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
