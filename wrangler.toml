@@ -1,4 +1,8 @@
-# Cloudflare Pages config for the static app (the TTS Worker lives in worker/ with its own config).
+# Cloudflare Workers static assets config for the app (the TTS Worker lives in worker/ with its own config).
+# Deploy with `npx wrangler deploy` (the Git integration's default deploy command).
 name = "scrollword"
-pages_build_output_dir = "./dist"
 compatibility_date = "2026-11-01"
+
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
