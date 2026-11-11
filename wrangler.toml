@@ -1,0 +1,4 @@
+# Cloudflare Pages config for the static app (the TTS Worker lives in worker/ with its own config).
+name = "scrollword"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-11-01"

@@ -18,6 +18,13 @@ npm test           # engine unit tests (timeline math, providers, 31k verse sani
 `tools/e2e.py` is a Playwright smoke test at a 390x844 touch viewport (it hardcodes /usr/bin/google-chrome).
 `tools/build_web.py` rebuilds `public/data/web.json` from the TehShrike/world-english-bible repo JSON.
 
+## Deploy to Cloudflare Pages
+
+- **Dashboard (Git integration):** Workers & Pages -> Create -> Pages -> connect this repo. Build command `npm run build`, output directory `dist`, Node 22.
+- **CLI:** `npx wrangler login`, then `npm run deploy` (first run creates the `scrollword` Pages project).
+- `public/_headers` sets long-lived caching for hashed assets and no-cache for `index.html`, `sw.js` and the manifest. The service worker fetches navigations network-first, so new deploys show up on reload.
+- The TTS Worker deploys separately from `worker/` (see below).
+
 ## Layout
 
 ```
